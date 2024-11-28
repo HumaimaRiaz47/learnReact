@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 450px;
+    width: 350px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: palevioletred;
+    
+  }
+
+.img{
+    height: 300px;
+    width: 300px;
+}
