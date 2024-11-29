@@ -2,15 +2,13 @@ import React from "react";
 import "./UserCard.css";
 import image from "./../assets/image.jpg"
 
-const UserCard = () => {
+const UserCard = (props) => {
   return (
     <div className="container">
-      <h1>Paris</h1>
-      <img src={image} className="img"/>
+      <h1>{props.name}</h1>
+      <img src={props.img} className="img"/>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. At ratione ea
-        quas natus doloremque et nemo facere ab nam tempora, ipsam eligendi sunt
-        
+        {props.des}
       </p>
     </div>
   );
