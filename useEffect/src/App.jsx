@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Logger from './components/Logger.jsx'
+import DataFetcher from "./components/DataFetcher.jsx";
 
 const App = () => {
 
   return(
     <div>
       <Logger/>
+      <DataFetcher/>
+      <Resize/>
+      <Timer/>
+      
     </div>
   )
   // const [count, setCount] = useState(0)
