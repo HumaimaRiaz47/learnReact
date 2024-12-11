@@ -5,6 +5,9 @@ import Dashboard from './components/Dashboard'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Params from './components/Params'
+import Courses from './components/Courses'
+import Mock from './components/Mock'
+import NotFound from './NotFound'
 
 const router = createBrowserRouter(
   [
@@ -28,7 +31,17 @@ const router = createBrowserRouter(
       element: <div>
       <Navbar/>
       <Dashboard/>
-      </div>
+      </div>,
+      children:[
+        {
+          path: 'courses',
+          element: <Courses/>
+        },
+        {
+          path: 'mock-test',
+          element: <Mock/>
+        }
+      ]
     },
     {
       path: '/students/:id',
@@ -36,6 +49,10 @@ const router = createBrowserRouter(
       <Navbar/>
       <Params/>
       </div>
+    },
+    {
+      path: '*',
+      element: <NotFound/>
     }
   ]
 )
